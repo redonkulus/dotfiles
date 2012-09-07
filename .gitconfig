@@ -1,20 +1,25 @@
 [alias]
+    ca = git commit -a -m
 	ci = commit
 	st = status
 	br = branch
 	co = checkout
-	df = diff
+    di = diff
+    pom = pull origin master
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
 	lo = log --oneline
-  authors = log --pretty=format:'%an <%ae>'
-  dif = diff
-  di = diff
+    authors = log --pretty=format:'%an <%ae>'
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    tree = log --graph --pretty=format:'%Cred%h%Creset - %C(blue)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    type = cat-file -t
+    dump = cat-file -p
 [branch.master]
 	mergeoptions = log
 [color]
 	branch = auto
 	diff = auto
 	status = auto
+	ui = true
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -27,10 +32,10 @@
 [color "status"]
 	added = yellow
 	changed = green
-[user]
-	name = isaacs
-	email = i@izs.me
-	signingkey = 0x6C481CF6
+[core]
+    excludesfile = ~/.gitignore
+	autocrlf = input
+	safecrlf = true
 [diff]
 [difftool]
 	prompt = false
@@ -38,3 +43,6 @@
 	tool = vimdiff
 [merge]
 	tool = vimdiff
+[user]
+	name = redonkulus
+	email = seth@bertalotto.net

@@ -1,0 +1,39 @@
+#caption always "%{= bk} %{= bY} [%n]%t @ %H %{-} %= %{= bR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+
+startup_message off
+shelltitle '$ |shell'
+hardstatus lastline "%{=b gb} %m/%d %c %{=b bc} %-Lw%{=b .w}%50L>%n%f [%t]%{=b .c}%+Lw%<"
+
+
+# C + left : prev
+# C + right : next
+#bindkey "^[[1;5C" next
+#bindkey "^[O5C" next
+#bindkey "^[[C" next
+#bindkey "^[[1;5D" prev
+#bindkey "^[O5D" prev
+#bindkey "^[[D" prev
+
+# C-a b : encoding big5
+# C-a u : encoding utf8
+#bind b encoding big5 utf8
+#bind u encoding utf8 utf8
+
+# C-b $num : move current window to number $num
+#bind -c move 0 number 0
+#bind -c move 1 number 1
+#bind -c move 2 number 2
+#bind -c move 3 number 3
+#bind -c move 4 number 4
+#bind -c move 5 number 5
+#bind -c move 6 number 6
+#bind -c move 7 number 7
+#bind -c move 8 number 8
+#bind -c move 9 number 9
+#bindkey "^b" command -c move
+
+defscrollback 500000
+vbell on
+vbell_msg "   Wuff  ----  Wuff!!  "
+
