@@ -4,15 +4,16 @@
 	st = status
 	br = branch
 	co = checkout
-    di = diff
-    pom = pull origin master
+        di = diff
+        pom = pull origin master
+        pum = push origin master
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
 	lo = log --oneline
-    authors = log --pretty=format:'%an <%ae>'
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-    tree = log --graph --pretty=format:'%Cred%h%Creset - %C(blue)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-    type = cat-file -t
-    dump = cat-file -p
+        authors = log --pretty=format:'%an <%ae>'
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        tree = log --graph --pretty=format:'%Cred%h%Creset - %C(blue)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+        type = cat-file -t
+        dump = cat-file -p
 [branch.master]
 	mergeoptions = log
 [color]
