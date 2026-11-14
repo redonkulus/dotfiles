@@ -1,5 +1,5 @@
 [alias]
-    ca = git commit -a -m
+	ca = commit -a -m
 	ci = commit
 	st = status
 	br = branch
