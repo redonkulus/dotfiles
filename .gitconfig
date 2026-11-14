@@ -45,5 +45,10 @@
 [merge]
 	tool = vimdiff
 [user]
-	name = customertrackr
-	email = admin@customertrackr.com
+	# No global identity: each folder below sets its own, and git refuses
+	# to commit anywhere else instead of guessing.
+	useConfigOnly = true
+[includeIf "gitdir:~/Dev/customertrackr/"]
+	path = ~/Dev/redonkulus/dotfiles/.gitconfig-customertrackr
+[includeIf "gitdir:~/Dev/redonkulus/"]
+	path = ~/Dev/redonkulus/dotfiles/.gitconfig-redonkulus

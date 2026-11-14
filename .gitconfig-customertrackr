@@ -1,0 +1,6 @@
+[user]
+	name = customertrackr
+	email = admin@customertrackr.com
+# Route github.com SSH remotes through the customertrackr key (see ~/.ssh/config).
+[url "git@github.com-customertrackr:"]
+	insteadOf = git@github.com:
