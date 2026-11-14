@@ -1,13 +1,7 @@
-#DOT_PROFILE_LOADED=1
-#if [ -n "$BASH_VERSION" ]; then
-#	[ -f ~/.bashrc ] && ! [ "$DOT_BASHRC_LOADED" == "1" ] && . ~/.bashrc
-#	[ -f ~/.extra.bashrc ] && . ~/.extra.bashrc
-#fi
-
 # Exports
 export EDITOR=vim
 export GIT_SSL_NO_VERIFY=true
-export PATH=/home/y/bin:$HOME/local/node/bin:$PATH
+export PATH=$HOME/.local/bin:/Applications/MAMP/bin/php/php8.4.17/bin:/usr/local/mysql/bin/:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.2.0/bin:$HOME/local/node/bin:$PATH
 
 # Aliases
 alias debugsafari='export CA_COLOR_OPAQUE=1; export CA_LOG_MEMORY_USAGE=1; /Applications/Safari.app/Contents/MacOS/Safari'
@@ -18,8 +12,20 @@ alias itunesbackup='defaults write com.apple.iTunes DeviceBackupsDisabled -bool'
 alias ls='ls -al'
 alias yran='ssh randiscover.corp.yahoo.com'
 
+# Dreamhost SSH
+alias ssb='ssh bertalotto.net'
+alias sct='ssh customertrackr.com'
+
+# MacFuse
+alias osb='sshfs sbertalo@bertalotto.net:/home/sbertalo/ ~/Dev/mounts/sb'
+alias csb='umount -f ~/Dev/mounts/sb'
+alias omidi='sshfs mididelight@mididelight.com:/home/mididelight/ ~/Dev/mounts/md'
+alias cmidi='umount -f ~/Dev/mounts/md'
+alias oct='sshfs customertrackr@customertrackr.com:/home/customertrackr/ ~/Dev/mounts/ct'
+alias cct='umount -f ~/Dev/mounts/ct'
+
 # Git
-source .git-completion
+source ~/Dev/dotfiles/.git-completion
 gitshell=
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -57,3 +63,7 @@ else
      start_agent;
 fi
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+nvm use 24 

@@ -5,8 +5,8 @@
 	br = branch
 	co = checkout
         di = diff
-        pom = pull origin master
-        pum = push origin master
+        pom = pull origin main
+        pum = push origin main
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
 	lo = log --oneline
         authors = log --pretty=format:'%an <%ae>'
@@ -35,7 +35,7 @@
 	changed = green
 [core]
     excludesfile = ~/.gitignore
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 [diff]
 [difftool]
@@ -45,5 +45,5 @@
 [merge]
 	tool = vimdiff
 [user]
-	name = redonkulus
-	email = seth@bertalotto.net
+	name = customertrackr
+	email = admin@customertrackr.com
