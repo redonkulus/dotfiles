@@ -1,6 +1,5 @@
 # Exports
 export EDITOR=vim
-export GIT_SSL_NO_VERIFY=true
 export PATH=$HOME/.local/bin:/Applications/MAMP/bin/php/php8.4.17/bin:/usr/local/mysql/bin/:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.2.0/bin:$HOME/local/node/bin:$PATH
 
 # Aliases
@@ -66,4 +65,4 @@ fi
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-nvm use 24 
+command -v nvm >/dev/null && nvm use 24
