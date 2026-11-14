@@ -1,6 +1,3 @@
-if ! [ "$PS1" == "" ]; then
-	DOT_BASHRC_LOADED=1
-	! [ "$DOT_PROFILE_LOADED" == "1" ] && . ~/.profile
-fi
-
-export PATH="$HOME/.local/bin:$PATH"
+# Interactive non-login shells (e.g. running `bash` inside a terminal):
+# load the same setup as login shells. .profile is safe to re-source.
+[ -n "$PS1" ] && . ~/.profile

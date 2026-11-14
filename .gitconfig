@@ -5,8 +5,9 @@
 	br = branch
 	co = checkout
         di = diff
-        pom = pull origin main
-        pum = push origin main
+	# pull/push origin's default branch (main or master, whichever the repo uses)
+	pom = "!f() { git pull origin \"$(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@')\" \"$@\"; }; f"
+	pum = "!f() { git push origin \"$(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@')\" \"$@\"; }; f"
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
 	lo = log --oneline
         authors = log --pretty=format:'%an <%ae>'

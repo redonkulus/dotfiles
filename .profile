@@ -1,6 +1,6 @@
 # Exports
 export EDITOR=vim
-export PATH=$HOME/.local/bin:$PATH
+case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
 export BASH_SILENCE_DEPRECATION_WARNING=1  # hide macOS "default shell is now zsh" notice
 
 # Aliases
