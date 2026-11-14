@@ -65,4 +65,4 @@ fi
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-command -v nvm >/dev/null && nvm use 24
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" # nvm tab completion
