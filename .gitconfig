@@ -15,7 +15,7 @@
         tree = log --graph --pretty=format:'%Cred%h%Creset - %C(blue)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
         type = cat-file -t
         dump = cat-file -p
-[branch.master]
+[branch "main"]
 	mergeoptions = log
 [color]
 	branch = auto
