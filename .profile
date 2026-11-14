@@ -24,7 +24,7 @@ alias oct='sshfs customertrackr@customertrackr.com:/home/customertrackr/ ~/Dev/m
 alias cct='umount -f ~/Dev/mounts/ct'
 
 # Git
-source ~/Dev/dotfiles/.git-completion
+source ~/Dev/redonkulus/dotfiles/.git-completion
 gitshell=
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
